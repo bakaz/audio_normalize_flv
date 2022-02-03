@@ -24,13 +24,14 @@ def flv_deal():
     # print(flv_dict)
     for key, value in flv_dict.items():
         # filename = key.split[:-1]
-        str = 'ffmpeg-normalize '+ value +' -o edited_'+key + ' -pr'
+        str = 'ffmpeg-normalize '+ value +' -o edited_'+key + '  -c:a aac -pr -b:a 320k'
         # print(str)
         os.system(str)
     # os.system('')
 
 if __name__ == '__main__':
     flv_deal()
-    print_hi('PyCharm')
+    print_hi('fin')
+    os.system('pause')
 
 # 访问 https://www.jetbrains.com/help/pycharm/ 获取 PyCharm 帮助
