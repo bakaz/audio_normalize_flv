@@ -19,8 +19,8 @@ def read_cwd_filname(suffixname):
     return import_flv_dict
 # 按间距中的绿色按钮以运行脚本。
 
-def flv_deal():
-    flv_dict = read_cwd_filname('.flv')
+def flv_deal(suffix_name):
+    flv_dict = read_cwd_filname('.'+suffix_name)
     # print(flv_dict)
     for key, value in flv_dict.items():
         # filename = key.split[:-1]
@@ -30,7 +30,9 @@ def flv_deal():
     # os.system('')
 
 if __name__ == '__main__':
-    flv_deal()
+    print('输入后缀名')
+    suffix_name = input()
+    flv_deal(suffix_name)
     print_hi('fin')
     os.system('pause')
 
